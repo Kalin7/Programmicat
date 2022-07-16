@@ -1,0 +1,10 @@
+@import url("./main-top.css");
+@import url("./main-middle.css");
+@import url("./main-bottom.css");
+
+main {
+    width: 80%;
+    position: relative;
+    margin: -125px auto;
+    z-index: -1;
+}

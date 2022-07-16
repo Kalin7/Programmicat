@@ -1,0 +1,90 @@
+
+.top-section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: clamp(400px, 1vw, 400px) clamp(400px, 1vw, 400px);
+    grid-template-areas: 
+        "orange-area grass-area green-area"
+        "purple-area purple-area green-area"
+    ;
+    gap: 20px;
+}
+
+.orange {
+    align-items: center;
+    justify-content: flex-start;
+    grid-area: orange-area;
+    background-color: var(--color-orange);
+}
+
+.grass {
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: grass-area;
+    background-color: var(--color-grass);
+}
+
+.green {
+    align-items: top;
+    justify-content: center;
+    grid-area: green-area;
+    background-color: var(--color-green);
+}
+
+.purple {
+    align-items: center;
+    justify-content: center;
+    grid-area: purple-area;
+    background-color: var(--color-purple);
+}
+
+.top-section--element {
+    display: flex;
+    padding: 0px 5px;
+    border-radius: var(--radius);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cyrcle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 37.5%;
+    left: 60%; 
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        transform: translate(0%, 6%);
+        display: flex;
+        flex-direction: column;
+    }
+    .top-section {
+        grid-template-columns: 100%;
+        grid-template-rows: 400px 400px 400px 400px;
+        grid-template-areas: 
+            "orange-area" 
+            "grass-area" 
+            "purple-area"
+            "green-area" 
+        ;
+    }
+
+    .cyrcle {
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}

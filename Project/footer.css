@@ -1,0 +1,40 @@
+footer {
+    width: 80%;
+    background-color: var(--color-gray);
+    margin: 150px auto;
+}
+
+.footer-nav {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--color-gray);
+}
+
+.nav-list {
+    list-style: none;
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+    padding: 20px 30px;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+li .angle {
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid black;
+}
+
+@media screen and (max-width: 768px) {
+  
+    footer {
+        position: relative;
+        top: 150px;
+    }
+   
+}
